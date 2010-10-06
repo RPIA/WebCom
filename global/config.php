@@ -5,7 +5,7 @@
 // TODO:  fill in relevant information
 
 //name of your domain.
-define("DOMAIN_NAME", "ambulance.union.rpi.edu");
+define("DOMAIN_NAME", "rpiambulance.org");
 
 //path relative to documentroot that you installed this into. no trailing slashes.
 define("INSTALL_PATH", "");
@@ -14,12 +14,12 @@ define("INSTALL_PATH", "");
 define("SQL_HOST", "localhost");
 
 //mysql username
-define("SQL_USERNAME", "rpia_username");
+define("SQL_USERNAME", "rpia");
 
 //mysql password
-define("SQL_PASSWORD", "rpia_password");
+define("SQL_PASSWORD", "BXT7X6RMSmZW6Vsr");
 
 //mysql database
-define("SQL_DATABASE", "rpia_db");
+define("SQL_DATABASE", "rpia");
 
 ?>
