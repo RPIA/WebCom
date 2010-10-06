@@ -57,7 +57,7 @@ function display_login_form() {
 function display_menu() {
     echo "
         <div id = 'top_menu'>
-            <a href = about.php'>About</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href = 'about.php'>About</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href = 'officers.php'>Officers</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href = 'contact.php'>Contact</a>&nbsp;&nbsp;&nbsp;";
 			
@@ -67,9 +67,10 @@ function display_menu() {
 	
 	if (logged_in()) {
 	echo "<a href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-		<a href = 'logout.php'>Log Out</a>
-	</div>";
+		<a href = 'logout.php'>Log Out</a>";
 	}
+	
+	echo "</div><br />";
 }
 
 function display_footer() {
