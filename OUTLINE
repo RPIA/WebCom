@@ -1,0 +1,44 @@
+RPI Ambulance Website
+
+PROJECT OUTLINE:
+    1. Login system
+        a. Login form (basic form is done, need to connect with db)
+    2. Interface and design
+        a. Site design via styles.css and display.php
+        b. Administrator/Officer panels
+        c. User panels
+		d. Content pages (About, Contact, Officers, etc)
+		e. Event interface (click and drag pics/maps of HFH/ECAV or similar)
+    3. Administrator/Officer functions
+        a. Add/Remove users
+		b. Edit user information
+		c. Add Events
+	4. Scheduling
+		a. Night crew scheduling
+		b. Event scheduling
+	5. Content pages
+		a. About
+		b. Officers
+		c. Contact
+
+LIST OF RELEVANT FILES:
+	/OUTLINE                outline of project, files, and changes
+    /index.php              main index page
+    /login.php              login page
+	/logout.php				logout page
+	/admin.php				administrator control panel
+	/about.php				content about RPIA
+	/officers.php			content about the officers of RPIA
+	/contact.php			content about how to contact RPIA
+	/styles.css				CSS file for site style
+	
+    /global/                directory for all globally included documents
+    /global/config.php      library file defining relevant constants
+    /global/includes.php    library file which includes all other library files, connects to MySQL, and starts a session
+    /global/database.php    library file containing database querying and connecting functions
+    /global/user.php        library file containing user login / out and data manipulation functions
+    /global/display.php     library file containing display output functions
+
+CHANGELOG:
+	16:56	10/5/2010	Nick Schulte	Created base files for site frontend.  Need to reconcile frontend with backend
+										in terms of db names/fields and whatnot
