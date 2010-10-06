@@ -59,15 +59,19 @@ function display_menu() {
         <div id = 'top_menu'>
             <a href = 'about.php'>About</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href = 'officers.php'>Officers</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-			<a href = 'contact.php'>Contact</a>&nbsp;&nbsp;&nbsp;";
-			
-    if (check_admin_user()) {
-        echo "<a href = 'admin.php'>Admin</a>&nbsp;&nbsp;|&nbsp;&nbsp;";
-    }
+			<a href = 'contact.php'>Contact</a>&nbsp;&nbsp;";
 	
 	if (logged_in()) {
-	echo "<a href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		if (check_admin_user()) {
+        echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
+    }
+	
+	echo "&nbsp;&nbsp;|<a href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href = 'logout.php'>Log Out</a>";
+	}
+	
+	else {
+		echo "&nbsp;&nbsp;|<a href = 'login.php'>Login</a>&nbsp;&nbsp;&nbsp;";
 	}
 	
 	echo "</div><br />";
