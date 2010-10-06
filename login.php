@@ -25,7 +25,7 @@ if (isset($_POST['username'])) {
             break;
         case "4" :
             // succeeded
-            header("Location: main.php");
+            header("Location: index.php");
             break;
         default :
             break;
@@ -35,7 +35,7 @@ if (isset($_POST['username'])) {
 // check if the user is already logged in
 if ($_SESSION['logged_in'] == 1) {
     // redirect to authenticated homepage
-    header("Location: main.php");
+    header("Location: index.php");
 }
 
 // otherwise, display normal login form
