@@ -24,6 +24,9 @@ status {
 }
 
 top_menu {
+	color:				white;
+	background-color:	#b0c4de;
+	font-weight:		bold;
     text-align:         center;
     width:              100%;
 }
