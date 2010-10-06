@@ -48,13 +48,13 @@ function display_login_form() {
         </div>";
 }
 
+
+// displays the overhead menu
+// put stuff here i guess when we have some sort of a menu
+// right now i just have dummy/generic things like About, Officers, and Contact
+// check is person is logged in and will display a couple different menu items like Admin if admin
+// or Profile so they can update their address/major/email/phone/password, etc
 function display_menu() {
-    // displays the overhead menu
-    // put stuff here i guess when we have some sort of a menu
-	// right now i just have dummy/generic things like About, Officers, and Contact
-	// check is person is logged in and will display a couple different menu items like Admin if admin
-	// or Profile so they can update their address/major/email/phone/password, etc
-	
     echo "
         <div id = 'top_menu'>
             <a href = about.php'>About</a>&nbsp;&nbsp;|&nbsp;&nbsp;

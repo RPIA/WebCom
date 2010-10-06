@@ -1,27 +1,27 @@
 <?php
 
 // login.php
-// handles login requests
-// if you're looking for the login form,
-// go to the display_login function in display.php
+// bring together the display_login and login function to make a cohesive login page
+// if you're looking for the login form, go to the display_login function in display.php
+// if you're looking for the login function, go to user.php
 
 include_once("./global/includes.php");
 
-// check to see if the user is trying to log in.
+// check to see if the user is trying to log in
 if (isset($_POST['username'])) {
     $login_result = login($_POST['username'], $_POST['password']);
     switch($login_result) {
         case "1" :
-            // form not filled in completely.
+            // form not filled in completely
             $status .= "Please fill in all fields completely. ";
             break;
         case "2" :
-            // no such user.
+            // no such user
             $status .= "The user you have specified does not exist. ";
             break;
         case "3" :
-            // wrong password.
-            $status .= "The username/password combination you have entered is incorrect. ";
+            // wrong password
+            $status .= "The username/password combination you have entered is incorrect.";
             break;
         case "4" :
             // succeeded
