@@ -28,7 +28,7 @@ function std_query($query) {
 // deletes a given userid
 function delete_user($userid) {
     if (check_officer_user()) {
-		$delete_user = std_query("DELETE FROM `users` WHERE `userid` = ".quote_smart($userid)." LIMIT 1");
+		$delete_user = std_query("DELETE FROM `users` WHERE `userid` = '".quote_smart($userid)."' LIMIT 1");
     }
     
 	else {

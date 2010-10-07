@@ -72,6 +72,7 @@ function check_officer_user() {
 }
 
 // convert userlevels to text
+// needs reworking or deletion to conform with database
 function userlevel_to_text($userlevel) {
     switch ($userlevel) {
         case 0 :
@@ -90,7 +91,7 @@ function userlevel_to_text($userlevel) {
 // reloads a user's information in the database into their session variable
 function reload_user() {
     $this_user = std_query("SELECT * FROM `users`
-                            WHERE `userid` = ".quote_smart($_SESSION['userid'])."
+                            WHERE `userid` = '".quote_smart($_SESSION['userid'])."'
                             LIMIT 1");
     if (!$this_user) {
         return false;
