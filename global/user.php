@@ -89,7 +89,8 @@ function userlevel_to_text($userlevel) {
 }
 
 // reloads a user's information in the database into their session variable
-function reload_user() {
+// needs to be removed or reconciled with database
+function reload_user() {/*
     $this_user = std_query("SELECT * FROM `users`
                             WHERE `userid` = '".quote_smart($_SESSION['userid'])."'
                             LIMIT 1");
@@ -97,7 +98,7 @@ function reload_user() {
         return false;
     }
 
-    $_SESSION = mysql_fetch_assoc($this_user);
+    $_SESSION = mysql_fetch_assoc($this_user);*/
     $_SESSION['logged_in'] = 1;
     return true;
 }
