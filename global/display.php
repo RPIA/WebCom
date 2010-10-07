@@ -57,6 +57,7 @@ function display_login_form() {
 function display_menu() {
     echo "
         <div id = 'top_menu'>
+            <a href = 'index.php'>Home</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href = 'about.php'>About</a>&nbsp;&nbsp;|&nbsp;&nbsp;
             <a href = 'officers.php'>Officers</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 			<a href = 'contact.php'>Contact</a>&nbsp;&nbsp;";
