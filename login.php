@@ -40,6 +40,7 @@ if ($_SESSION['logged_in'] == 1) {
 
 // otherwise, display normal login form
 display_header("Login", $status);
+display_menu();
 display_login_form();
 display_footer();
 

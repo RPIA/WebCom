@@ -71,7 +71,7 @@ function display_menu() {
 	}
 	
 	else {
-		echo "&nbsp;&nbsp;|<a href = 'login.php'>Login</a>&nbsp;&nbsp;&nbsp;";
+		echo "|&nbsp;&nbsp;<a href = 'login.php'>Login</a>&nbsp;&nbsp;&nbsp;";
 	}
 	
 	echo "</div><br />";
