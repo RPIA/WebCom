@@ -22,7 +22,7 @@ function login($username, $password) {
     }
 
     // try to get the username this person is trying to login as
-    $try_user = std_query("SELECT * FROM `userLogin`
+    $try_user = std_query("SELECT 'userID' FROM `userLogin`
                             WHERE `username` = '".quote_smart($username)."'
                             LIMIT 1");
 
