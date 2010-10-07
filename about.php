@@ -4,7 +4,7 @@
 // about the club
 // TODO:  fill in content
 
-include_once('./global/includes.php');
+include('./global/includes.php');
 
 display_header("", "");
 

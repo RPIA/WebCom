@@ -5,7 +5,7 @@
 // if you're looking for the login form, go to the display_login function in display.php
 // if you're looking for the login function, go to user.php
 
-include_once("./global/includes.php");
+include("./global/includes.php");
 
 // check to see if the user is trying to log in
 if (isset($_POST['username'])) {
