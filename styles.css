@@ -24,12 +24,16 @@ img {
 }
 
 #top_menu {
-	color:				white;
+	color:				#378e7b;
 	background-color:	#b0c4de;
 	font-weight:		bold;
     text-align:         center;
     width:              100%;
 }
+
+a.top_menu:link 		{color:#378e7b;}     
+a.top_menu:visited 	{color:#871ce;}  
+a.top_menu:hover 	{color:#f4b223;} 
 
 #main_title {
     font-size:          14pt;
