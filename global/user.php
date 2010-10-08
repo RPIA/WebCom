@@ -41,7 +41,7 @@ function login($username, $password) {
         // incorrect password, return error code 3
 		echo $username . " " . $password;
 		echo "<br />" . md5($password) . "<br />";
-		echo $try_user['password'];
+		if ($try_user['password'] == '') {echo "db pw is null lulz";}
         return 3;
     }
 
