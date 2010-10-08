@@ -4,7 +4,7 @@
 // homepage of site
 // TODO:  fill in content
 
-include('./global/includes.php');
+include_once('./global/includes.php');
 
 display_header("", "");
 

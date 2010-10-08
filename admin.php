@@ -3,7 +3,7 @@
 // admin.php
 // TODO:  make admin panel
 
-include('./global/includes.php');
+include_once('./global/includes.php');
 
 display_header("Administrator Panel", "");
 

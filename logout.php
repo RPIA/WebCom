@@ -2,7 +2,7 @@
 
 // logout.php
 
-include('./global/includes.php');
+include_once('./global/includes.php');
 
 logout();
 header("Location: index.php");
