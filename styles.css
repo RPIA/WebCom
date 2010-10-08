@@ -19,13 +19,26 @@ body {
 
 #top_menu {
 	color:				white;
-	background-color:	#FF030D;
+	background-color:	#CD0000;
 	font-weight:		bold;
     text-align:         center;
     width:              100%;
 	padding-bottom:		5px;
 	padding-top:		5px;
 }
+
+#top_menu a:link {
+	color:				#378e7b;
+}
+
+#top_menu a:visited {
+	color:				#871ce;
+}
+
+#top_menu a:hover {
+	color:				#f4b223;
+}
+
 
 #main_title {
     font-size:          14pt;

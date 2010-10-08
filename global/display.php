@@ -69,7 +69,7 @@ function display_menu() {
         echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
     }
 	
-	echo "&nbsp;&nbsp;|<a href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+	echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href = 'logout.php'>Log Out</a>";
 	}
 	
