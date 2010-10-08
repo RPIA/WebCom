@@ -22,7 +22,7 @@ function login($username, $password) {
     }
 
     // try to get the username this person is trying to login as
-    $try_user = std_query("SELECT 'userID' FROM `userLogin`
+    $try_user = std_query("SELECT * FROM `userLogin`
                             WHERE `username` = '".quote_smart($username)."'
                             LIMIT 1");
 
@@ -33,15 +33,12 @@ function login($username, $password) {
     }
 	
     else {
-        $try_user = mysql_fetch_assoc($try_user);
+        $try_user = mysql_fetch_array($try_user);
     }
 
     // check password
     if (md5($password) != $try_user['password']) {
         // incorrect password, return error code 3
-		echo $username . " " . $password;
-		echo "<br />" . md5($password) . "<br />";
-		if ($try_user['password'] == '') {echo "db pw is null lulz";}
         return 3;
     }
 
