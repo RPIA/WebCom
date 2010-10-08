@@ -8,8 +8,6 @@ include_once('./global/includes.php');
 
 display_header("", "");
 
-display_menu();
-
 echo "Welcome to the website of RPI Ambulance!";
 
 display_footer();

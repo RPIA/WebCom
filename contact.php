@@ -6,9 +6,7 @@
 
 include_once('./global/includes.php');
 
-display_header("", "");
-
-display_menu();
+display_header("Contact", "");
 
 echo "Come by our office at 92 College Ave!";
 

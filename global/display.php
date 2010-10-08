@@ -24,7 +24,9 @@ function display_header($title=FALSE, $status="") {
 		echo '
 	</head>
 
-	<body>
+	<body>';
+	display_menu();
+	echo '
 		<div id = "page_container">
 			<div id = "status">'.$status.'</div>';
 }
@@ -75,7 +77,7 @@ function display_menu() {
 		echo "|&nbsp;&nbsp;<a href = 'login.php'>Login</a>&nbsp;&nbsp;&nbsp;";
 	}
 	
-	echo "</div><br />";
+	echo "</div><br /><br />";
 }
 
 function display_footer() {

@@ -7,8 +7,6 @@ include_once('./global/includes.php');
 
 display_header("Administrator Panel", "");
 
-display_menu();
-
 if (check_admin_user()) {
 	echo "Welcome, administrator.";
 }

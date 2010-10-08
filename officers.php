@@ -6,9 +6,7 @@
 
 include_once('./global/includes.php');
 
-display_header("", "");
-
-display_menu();
+display_header("Officers", "");
 
 echo "The officers of RPI Ambulance are listed below.";
 

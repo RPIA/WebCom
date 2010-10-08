@@ -6,9 +6,7 @@
 
 include_once('./global/includes.php');
 
-display_header("", "");
-
-display_menu();
+display_header("About", "");
 
 echo "RPI Ambulance is a campus run ambulance service.";
 
