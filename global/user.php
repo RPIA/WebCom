@@ -40,7 +40,7 @@ function login($username, $password) {
     if (md5($password) != $try_user['password']) {
         // incorrect password, return error code 3
 		echo $username . " " . $password;
-		echo md5($password);
+		echo "<br />" . md5($password) . "<br />";
 		echo $try_user['password'];
         return 3;
     }
