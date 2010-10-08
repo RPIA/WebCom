@@ -24,16 +24,15 @@ img {
 }
 
 #top_menu {
-	color:				#378e7b;
+	color:				white;
 	background-color:	#b0c4de;
 	font-weight:		bold;
-    text-align:         center;
-    width:              100%;
+    margin-left:		auto;
+	margin-right:		auto;
+    width:              auto;
+	padding-bottom:		5px;
+	padding-top:		5px;
 }
-
-a.top_menu:link 		{color:#378e7b;}     
-a.top_menu:visited 	{color:#871ce;}  
-a.top_menu:hover 	{color:#f4b223;} 
 
 #main_title {
     font-size:          14pt;
