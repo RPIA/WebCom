@@ -18,7 +18,7 @@ body {
 }
 
 #top_menu {
-	color:				white;
+	color:				#CDCDCD;
 	background-color:	#CD0000;
 	font-weight:		bold;
     text-align:         center;
@@ -28,11 +28,11 @@ body {
 }
 
 #top_menu a:link {
-	color:				#378e7b;
+	color:				#CDCDCD;
 }
 
 #top_menu a:visited {
-	color:				#378e7b;
+	color:				#CDCDCD;
 }
 
 #top_menu a:hover {
