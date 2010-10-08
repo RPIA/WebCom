@@ -12,18 +12,18 @@ img {
 }
 
 
-page_container {
+#page_container {
     width:              1024px;
     margin-left:        auto;
     margin-right:       auto;
     padding-bottom:     10px;
 }
 
-status {
+#status {
     color:              red;
 }
 
-top_menu {
+#top_menu {
 	color:				white;
 	background-color:	#b0c4de;
 	font-weight:		bold;
@@ -31,7 +31,7 @@ top_menu {
     width:              100%;
 }
 
-main_title {
+#main_title {
     font-size:          14pt;
     font-weight:        bold;
 }
