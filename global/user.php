@@ -46,7 +46,7 @@ function login($username, $password) {
     $result = std_query("SELECT * FROM `users` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` INNER JOIN `memberStatuses` ON `memberStatuses`.`id`=`users`.`memberStatus` WHERE `users`.`id`='".$try_user['userID']."'");
     $userInfo = mysql_fetch_assoc($result);
     // get major info
-    $result = std_query("SELECT *,`majors`.`majorID` AS `majorID`, `majors`.`name` AS `majorName`, `majorSchools`.`name` AS `schoolName` FROM `majors` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `majors`.`id`='".$userInfo['majorID']."'");
+    $result = std_query("SELECT *,`majors`.`id` AS `majorID`, `majors`.`name` AS `majorName`, `majorSchools`.`name` AS `schoolName` FROM `majors` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `majors`.`id`='".$userInfo['majorID']."'");
     $majorInfo = mysql_fetch_assoc($result);
     // this person checks out, log them in
     $_SESSION = $try_user;
