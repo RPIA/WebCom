@@ -43,7 +43,6 @@ function login($username, $password) {
     }
 
     $result = std_query("SELECT * FROM `users` WHERE `id`='".$try_user['userID']."'");
-	echo "SELECT * FROM `users` WHERE `id`='".$try_user['userID']."'";
     // this person checks out, log them in
     $_SESSION = $try_user;
     $_SESSION['info'] = mysql_fetch_assoc($result);
