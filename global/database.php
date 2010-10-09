@@ -16,6 +16,7 @@ function quote_smart($value) {
 }
 
 // executes a query with standardized error message
+// return value is a PHP MySQL result resource
 function std_query($query) {
    $result = mysql_query($query)
       or die("Could not query MySQL database in ".$_SERVER['PHP_SELF'].".<br />
