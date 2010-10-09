@@ -42,7 +42,7 @@ function login($username, $password) {
         return 3;
     }
 
-    $result = std_query("SELECT * FROM `users` WHERE `id`='".$try_user['userID']."'");
+    $result = std_query("SELECT * FROM `users` INNER JOIN `majors` ON `majors`.`id`=`users`.`majorID` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` INNER JOIN `memberStatuses` ON `memberStatuses`.`id`=`users`.`memberStatus` WHERE `users`.`id`='".$try_user['userID']."'");
     // this person checks out, log them in
     $_SESSION = $try_user;
     $_SESSION['info'] = mysql_fetch_assoc($result);
