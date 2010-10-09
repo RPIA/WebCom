@@ -42,10 +42,16 @@ function login($username, $password) {
         return 3;
     }
 
-    $result = std_query("SELECT * FROM `users` INNER JOIN `majors` ON `majors`.`id`=`users`.`majorID` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` INNER JOIN `memberStatuses` ON `memberStatuses`.`id`=`users`.`memberStatus` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `users`.`id`='".$try_user['userID']."'");
+    // get user info
+    $result = std_query("SELECT * FROM `users` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` INNER JOIN `memberStatuses` ON `memberStatuses`.`id`=`users`.`memberStatus` WHERE `users`.`id`='".$try_user['userID']."'");
+    $userInfo = mysql_fetch_assoc($result);
+    // get major info
+    $result = std_query("SELECT * FROM `majors` ON `majors`.`id`=`users`.`majorID` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `majors`.`id`='".$userData['majorID']."'");
+    $majorInfo = mysql_fetch_assoc($result);
     // this person checks out, log them in
     $_SESSION = $try_user;
-    $_SESSION['info'] = mysql_fetch_assoc($result);
+    $_SESSION['userInfo'] = userInfo;
+    $_SESSION['majorInfo'] = $majorInfo;
     $_SESSION['logged_in'] = 1;
 
 	// code for good login
