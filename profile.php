@@ -10,6 +10,7 @@ display_header("Profile", "");
 
 if (logged_in()) {
 	// form to change profile info
+	echo "You'll be able to change your login info here!";
 }
 
 else if (!logged_in()) {
