@@ -42,8 +42,10 @@ function login($username, $password) {
         return 3;
     }
 
+    $result = std_query("SELECT * FROM `users` WHERE `userID`='".$try_user['userID']."'")
     // this person checks out, log them in
     $_SESSION = $try_user;
+    $_SESSION['info'] = mysql_fetch_assoc($result);
     $_SESSION['logged_in'] = 1;
 
 	// code for good login
