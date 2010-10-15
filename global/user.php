@@ -33,7 +33,6 @@ function login($username, $password) {
     }
 	
     else {
-		echo $try_user['password'];
         $try_user = mysql_fetch_array($try_user);
     }
 
