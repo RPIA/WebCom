@@ -31,10 +31,6 @@ function login($username, $password) {
         // no such user, return error code 2
         return 2;
     }
-	
-    else {
-        $try_user = mysql_fetch_array($try_user);
-    }
 
     // check password
     if (md5($password) != $try_user['password']) {
