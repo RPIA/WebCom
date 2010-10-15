@@ -59,14 +59,17 @@ function login($username, $password) {
 }
 
 // check if user is an administrator
-function check_admin_user() {
+// needs to be updated to work with proper db field
+// right now, everyone is an admin! yay!
+function check_admin_user() {/*
     if ($_SESSION['userlevel'] == 2) {
         return true;
     }
 	
     else {
         return false;
-    }
+    }*/
+	return true;
 }
 
 // check if user is an officer
