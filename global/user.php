@@ -49,7 +49,7 @@ function login($username, $password) {
     $result = std_query("SELECT *,`majors`.`id` AS `majorID`, `majors`.`name` AS `majorName`, `majorSchools`.`name` AS `schoolName` FROM `majors` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `majors`.`id`='".$userInfo['majorID']."'");
     $majorInfo = mysql_fetch_assoc($result);
     // this person checks out, log them in
-    $_SESSION = $try_user;
+    $_SESSION['userLogin'] = $try_user;
     $_SESSION['userInfo'] = $userInfo;
     $_SESSION['majorInfo'] = $majorInfo;
     $_SESSION['logged_in'] = 1;
