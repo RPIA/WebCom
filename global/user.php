@@ -43,14 +43,17 @@ function login($username, $password) {
     }
 
     // get user info
-    $result = std_query("SELECT * FROM `users` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` INNER JOIN `memberStatuses` ON `memberStatuses`.`id`=`users`.`memberStatus` WHERE `users`.`id`='".$try_user['userID']."'");
+    $result = std_query("SELECT * FROM `users` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` WHERE `users`.`id`='".$try_user['userID']."'");
     $userInfo = mysql_fetch_assoc($result);
+    $result = std_query("SELECT `desc` FROM `memberStatuses` INNER JOIN `memberStatusAssociations` ON `memberStatuses`.`id`=`memberStatusAssociations`.`memberStatus` INNER JOIN `users` ON `users`.`id`=`memberStatusAssociations`.`member_id` WHERE `users`.`id`='".$userInfo['majorID']."'");
+	$memberStatusInfo = mysql_fetch_assoc($result);
     // get major info
     $result = std_query("SELECT *,`majors`.`id` AS `majorID`, `majors`.`name` AS `majorName`, `majorSchools`.`name` AS `schoolName` FROM `majors` INNER JOIN `majorSchools` ON `majorSchools`.`id`=`majors`.`schoolID` WHERE `majors`.`id`='".$userInfo['majorID']."'");
     $majorInfo = mysql_fetch_assoc($result);
     // this person checks out, log them in
     $_SESSION['userLogin'] = $try_user;
     $_SESSION['userInfo'] = $userInfo;
+    $_SESSION['memberStatus'] = $memberStatusInfo;
     $_SESSION['majorInfo'] = $majorInfo;
     $_SESSION['logged_in'] = 1;
 
