@@ -13,6 +13,7 @@ if (logged_in()) {
 	// form to change profile info
 	?>
 <h2><?php echo $userInfo['firstName'];?> <?php echo $userInfo['lastName'];?></h2>
+<h4><?php echo $userInfo['majorInfo']['majorName'];?></h4>
 	<?php
 	echo "You'll be able to change your login info here!";
 	echo "<pre>";
