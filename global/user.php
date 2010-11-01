@@ -73,7 +73,7 @@ function check_admin_user() {/*
     else {
         return false;
     }*/
-	return true;
+	return logged_in();
 }
 
 // check if user is an officer
