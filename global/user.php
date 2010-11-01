@@ -45,7 +45,7 @@ function login($username, $password) {
     // get user info
     $result = std_query("SELECT * FROM `users` INNER JOIN `states` ON `states`.`id`=`users`.`addressState` WHERE `users`.`id`='".$try_user['userID']."'");
     $userInfo = mysql_fetch_assoc($result);
-    $result = std_query("SELECT `id`,`desc` FROM `memberStatuses` INNER JOIN `memberStatusAssociations` ON `memberStatuses`.`id`=`memberStatusAssociations`.`memberStatus` INNER JOIN `users` ON `users`.`id`=`memberStatusAssociations`.`member_id` WHERE `users`.`id`='".$userInfo['majorID']."'");
+    $result = std_query("SELECT `users`.`id`,`desc` FROM `memberStatuses` INNER JOIN `memberStatusAssociations` ON `memberStatuses`.`id`=`memberStatusAssociations`.`memberStatus` INNER JOIN `users` ON `users`.`id`=`memberStatusAssociations`.`member_id` WHERE `users`.`id`='".$userInfo['majorID']."'");
 	while ($row = mysql_fetch_assoc($result))
 		$memberStatusInfo[$row['id']] = $row['desc'];
     // get major info
