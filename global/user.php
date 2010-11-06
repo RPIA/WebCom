@@ -103,6 +103,17 @@ function userlevel_to_text($userlevel) {
     return $text;
 }
 
+// deletes a given userid
+function delete_user($userid) {
+    if (check_officer_user()) {
+		$delete_user = std_query("DELETE FROM `users` WHERE `userid` = '".quote_smart($userid)."' LIMIT 1");
+    }
+    
+	else {
+		return "You do not have sufficient privileges to modify this user. ";
+	}
+}
+
 // reloads a user's information in the database into their session variable
 // needs to be removed or reconciled with database
 function reload_user() {/*
