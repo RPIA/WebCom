@@ -66,10 +66,11 @@ function display_menu() {
 	
 	if (logged_in()) {
 		if (check_admin_user()) {
-        echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
-    }
-	
-	echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    	    echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
+	    }
+	    echo "&nbsp;&nbsp;<a href = 'events.php'>Games & Events</a>&nbsp;&nbsp;";
+	    
+		echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href = 'logout.php'>Log Out</a>";
 	}
 	
