@@ -23,7 +23,7 @@ if (logged_in()) {
 }
 
 elseif (!logged_in()) {
-	header("Location: login.php?status=Please log in.");
+	echo "You must be logged in to view this page.";
 	exit;
 }
 
