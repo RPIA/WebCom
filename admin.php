@@ -43,7 +43,7 @@ if (check_admin_user()) {
 }
 
 else {
-	echo "You do not have sufficient privileges to view this page.";
+	echo wrong_permissions_msg();
 }	
 
 display_footer();

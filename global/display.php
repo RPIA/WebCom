@@ -81,6 +81,14 @@ function display_menu() {
 	echo "</div><br /><br />";
 }
 
+function wrong_permissions_msg() {
+	echo "You do not have the proper permissions to view this page.";
+}
+
+function not_logged_in_msg() {
+	echo "You must be logged in to view this page.";
+}
+
 function display_footer() {
     echo '
     </div>

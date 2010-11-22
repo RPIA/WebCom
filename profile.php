@@ -23,8 +23,7 @@ if (logged_in()) {
 }
 
 elseif (!logged_in()) {
-	echo "You must be logged in to view this page.";
-	exit;
+	not_logged_in_msg();
 }
 
 display_footer();

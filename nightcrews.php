@@ -10,7 +10,7 @@ if (logged_in()) {
 }
 
 else if (!logged_in()) {
-  echo "Can't change anything, 'cause you're not logged in";
+	not_logged_in_msg();
 }
 
 display_footer();
