@@ -12,9 +12,9 @@ if (logged_in()) {
 	$userInfo = $_SESSION['userInfo'];
 	// form to change profile info
 	?>
-<h2><?php echo $userInfo['firstName'];?> <?php echo $userInfo['lastName'];?></h2>
-<h4><?php echo $_SESSION['majorInfo']['majorName'];?></h4>
-<span id="address">Current address on file:<br><?php echo $userInfo['addressNumber']." ".$userInfo['addressStreet']."<br>".$userInfo['AddressCity'].", ".$userInfo['stateAbbrev']." ".$userInfo['addressZip'];?></span>
+<span><span style="size:18pt;font-weight:bold;"><?php echo $userInfo['firstName'];?> <?php echo $userInfo['lastName'];?></span><br>
+<span style="size:14pt;font-weight:bold;"><?php echo $_SESSION['majorInfo']['majorName'];?></span></span>
+<span id="address">Current address on file:<br><?php echo $userInfo['addressNumber']." ".$userInfo['addressStreet']."<br>".$userInfo['addressCity'].", ".$userInfo['stateAbbrev']." ".$userInfo['addressZip'];?></span>
 <span id="studentInfo">Current student info:<br><?php ;?></span>
 	<?php
 	echo "You'll be able to change your login info here!";
@@ -22,9 +22,8 @@ if (logged_in()) {
 	print_r($_SESSION);
 }
 
-else if (!logged_in()) {
-	header("Location: login.php?status=Please log in.");
-	exit;
+elseif (!logged_in()) {
+	not_logged_in_msg();
 }
 
 display_footer();

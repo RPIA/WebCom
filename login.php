@@ -7,6 +7,12 @@
 
 include_once("./global/includes.php");
 
+// check if the user is already logged in
+if ($_SESSION['logged_in'] == 1) {
+    // redirect to authenticated homepage
+    header("Location: index.php");
+}
+
 // check to see if the user is trying to log in
 if (isset($_POST['username'])) {
     $login_result = login($_POST['username'], $_POST['password']);
@@ -30,12 +36,6 @@ if (isset($_POST['username'])) {
         default :
             break;
     }
-}
-
-// check if the user is already logged in
-if ($_SESSION['logged_in'] == 1) {
-    // redirect to authenticated homepage
-    header("Location: index.php");
 }
 
 // otherwise, display normal login form

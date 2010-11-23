@@ -66,10 +66,11 @@ function display_menu() {
 	
 	if (logged_in()) {
 		if (check_admin_user()) {
-        echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
-    }
-	
-	echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+    	    echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
+	    }
+	    echo "&nbsp;&nbsp;<a href = 'events.php'>Games & Events</a>&nbsp;&nbsp;";
+	    
+		echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
 		<a href = 'logout.php'>Log Out</a>";
 	}
 	
@@ -78,6 +79,14 @@ function display_menu() {
 	}
 	
 	echo "</div><br /><br />";
+}
+
+function wrong_permissions_msg() {
+	echo "You do not have the proper permissions to view this page.";
+}
+
+function not_logged_in_msg() {
+	echo "You must be logged in to view this page.";
 }
 
 function display_footer() {
