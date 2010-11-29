@@ -7,6 +7,7 @@ display_header("Night Crews", "");
 if (logged_in()) {
 	// form to change profile info
 	echo "Night Crew information goes here.";
+  display_crew_member(3);
 }
 
 else if (!logged_in()) {
