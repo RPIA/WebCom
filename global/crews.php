@@ -18,6 +18,6 @@ function display_crew_member($user_id) {
 
   $result = std_query("SELECT * FROM `users` WHERE `users`.`id`='".$user_id."'");
     $userInfo = mysql_fetch_assoc($result);
-  echo "&nbsp;&nbsp;<a href = "mailto:$userInfo['email']" >M. O'Keefe</a>&nbsp;&nbsp;";  
+  echo "&nbsp;&nbsp;<a href = 'mailto:$userInfo['email']' >'$userInfo['firstName'][0]' '$userInfo['lastName']'</a>&nbsp;&nbsp;";  
 }
 ?>
