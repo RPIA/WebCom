@@ -68,6 +68,7 @@ function display_menu() {
 		if (check_admin_user()) {
     	    echo "&nbsp;&nbsp;<a href = 'admin.php'>(Admin)</a>&nbsp;&nbsp;";
 	    }
+      echo "&nbsp;&nbsp;<a href = 'nightcrews.php'>Night Crews</a>&nbsp;&nbsp;";
 	    echo "&nbsp;&nbsp;<a href = 'events.php'>Games & Events</a>&nbsp;&nbsp;";
 	    
 		echo "&nbsp;&nbsp;|<a id='top_menu' href = 'profile.php'>Profile</a>&nbsp;&nbsp;|&nbsp;&nbsp;
