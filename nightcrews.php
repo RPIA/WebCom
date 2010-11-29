@@ -1,6 +1,7 @@
 <?php
 
 include_once("./global/includes.php");
+include_once("./global/crews.php");
 
 display_header("Night Crews", "");
 
