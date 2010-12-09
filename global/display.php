@@ -89,6 +89,10 @@ function not_logged_in_msg() {
 	echo "You must be logged in to view this page.";
 }
 
+function display_user_info_form() {
+
+}
+
 function display_footer() {
     echo '
     </div>
