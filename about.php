@@ -13,4 +13,3 @@ echo "RPI Ambulance is a campus run ambulance service.";
 display_footer();
 
 ?>
-test
