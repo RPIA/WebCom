@@ -149,7 +149,7 @@ if($_POST)
 	}
 	
 	//Last name
-	if (preg_match('/^[\w \\\']{3,20}$/', $lastname))
+	if (preg_match('/^[\w \\\']{3,20}$/', quote_smart($lastname)))
 	{
 		$valid_lastname=$lastname;
 	}
