@@ -2,7 +2,7 @@
 
 include_once("./global/includes.php");
 
-display_header("Profile", "");
+display_header("New User", "");
 
 if (logged_in()) { ?>
 	<script src="global/javascript/jquery.js" type="text/javascript"></script>

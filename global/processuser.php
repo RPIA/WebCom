@@ -272,7 +272,7 @@ if($_POST)
 			}
 			unset($hasher);
 			
-			$query = "INSERT INTO `userlogin` VALUES (".quote_smart($id).
+			$query = "INSERT INTO `userLogin` VALUES (".quote_smart($id).
 			", '".quote_smart($valid_username)."', '".$hash."')";
 			$result = mysql_query($query);
 			if (!$result) {

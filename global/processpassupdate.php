@@ -62,7 +62,7 @@ if($_POST)
 		}
 		unset($hasher);
 		
-		$query = "UPDATE `userlogin` SET password='".$hash.
+		$query = "UPDATE `userLogin` SET password='".$hash.
 		"' WHERE userID = ".quote_smart($user_id);
 		$result = mysql_query($query);
 		if (!$result) {
