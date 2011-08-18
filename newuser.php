@@ -42,7 +42,7 @@ if (logged_in()) { ?>
 	   
 	   <p>
 		 <label for="lastname">Last Name</label>
-		 <em>*</em><input id="lastname" name="lastname" size="25" class="required" minlength="2" class="required" minlength="2" value="<?php echo $valid_lastname; ?>"/>
+		 <em>*</em><input id="lastname" name="lastname" size="25" class="required" minlength="2" class="required" minlength="2" value="<?php echo stripslashes($valid_lastname); ?>"/>
 		 <?php echo $error_lastname; ?>
 	   </p>
 	   
