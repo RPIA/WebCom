@@ -145,10 +145,6 @@ if (logged_in()) { ?>
 	   
 	 </fieldset>
 	 </form>
-	  </div>
-	 </body>
-	 
-	 </html>
 
 <?php
 } elseif (!logged_in()) {

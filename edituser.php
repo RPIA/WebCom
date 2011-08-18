@@ -1,9 +1,10 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-<title>Edit User</title>
+<?php 
 
-<link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+include_once("./global/includes.php");
+
+display_header("Edit User", "");
+
+if (logged_in()) { ?>
 
 <script src="jquery.js" type="text/javascript"></script>
 <script src="jquery.validate.js" type="text/javascript"></script>
@@ -107,7 +108,11 @@ $(document).ready(function(){
    
  </fieldset>
  </form>
-  </div>
- </body>
- 
- </html>
+
+<?php
+} elseif (!logged_in()) {
+	not_logged_in_msg();
+}
+
+display_footer();
+?>
