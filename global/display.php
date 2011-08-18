@@ -90,6 +90,10 @@ function not_logged_in_msg() {
 	echo "You must be logged in to view this page.";
 }
 
+function success_msg($msg) {
+	echo "Success: ".$msg;
+}
+
 function display_user_info_form() {
 
 }

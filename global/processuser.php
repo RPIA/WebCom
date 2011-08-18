@@ -280,7 +280,8 @@ if($_POST)
 			$message .= 'Whole query: ' . $query;
 			die($message);
 			} else {
-				header( 'Location: index.html');
+				header( 'Location: admin.php');
+				success_msg("New user created");
 			}
 		} else {
 				$query = "UPDATE `users` SET firstName='".quote_smart($valid_firstname).
@@ -294,7 +295,8 @@ if($_POST)
 			$message .= 'Whole query: ' . $query;
 			die($message);
 			} else {
-				header( 'Location: index.html');
+				header( 'Location: admin.php');
+				success_msg("User updated");
 			}
 		}
 	}
