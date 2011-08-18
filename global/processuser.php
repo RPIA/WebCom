@@ -149,13 +149,13 @@ if($_POST)
 	}
 	
 	//Last name
-	if (preg_match('/^[\w \']{3,20}$/', $lastname))
+	if (preg_match('/^[\w \\\']{3,20}$/', $lastname))
 	{
 		$valid_lastname=$lastname;
 	}
 	else
 	{ 
-		$error_lastname='Enter valid First Name.'; 
+		$error_lastname='Enter valid Last Name.'; 
 	}
 	
 	if ($newuser) {
