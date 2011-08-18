@@ -22,7 +22,7 @@ if ($newuser) {
 	$error_password = '';
 	$error_password_confirmation = '';
 } else {
-	$user_id = $_SESSION['userInfo']['id'];
+	$user_id = $_SESSION['userLogin']['userID'];
 	
 	$query = "SELECT * FROM `users`, `states`, `majors` WHERE  users.addressState = states.id AND users.majorID = majors.id AND users.id = ".quote_smart($user_id);
 	$result = mysql_query($query);
