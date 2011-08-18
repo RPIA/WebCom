@@ -36,8 +36,8 @@ function login($username, $password) {
         $try_user = mysql_fetch_assoc($try_user);
     }
 
-    // check password
-    if (md5($password) != $try_user['password']) {
+	$hasher = new PasswordHash(HASH_COST_LOG2, HASH_PORTABLE);
+	if (!$hasher->CheckPassword($password, $try_user['password'])) {
         // incorrect password, return error code 3
         return 3;
     }
