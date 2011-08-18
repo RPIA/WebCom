@@ -10,8 +10,10 @@ display_header("Administrator Panel", "");
 if (check_admin_user()) {
 	switch ($_GET['action']) {
 		case 'adduser':
+			header( 'location: newuser.php');
 			break;
 		case 'edituser':
+			header( 'location: edituser.php');
 			break;
 		case 'deluser':
 			break;
