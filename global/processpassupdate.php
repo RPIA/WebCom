@@ -1,26 +1,5 @@
 <?php
 
-require 'PasswordHash.php';
-
-define("SQL_HOST", "localhost");
-define("SQL_USERNAME", "okeefm");
-define("SQL_PASSWORD", "lxj9zf3dse");
-define("SQL_DATABASE", "rpia");
-
-mysql_connect(SQL_HOST, SQL_USERNAME, SQL_PASSWORD)
-    or die("Unable to connect to MySQL.");
-mysql_select_db(SQL_DATABASE)
-    or die("Error while connecting to database.");
-
-// Base-2 logarithm of the iteration count used for password stretching
-$hash_cost_log2 = 8;
-// Do we require the hashes to be portable to older systems (less secure)?
-$hash_portable = FALSE;
-
-function quote_smart($value) {
-	return mysql_real_escape_string($value);
-}
-
 $oldpassword = '';
 $valid_password = '';
 $passwordconfirmation = '';
@@ -64,7 +43,7 @@ if($_POST)
 	}
 	
 	//Old password
-	$hasher = new PasswordHash($hash_cost_log2, $hash_portable);
+	$hasher = new PasswordHash(HASH_COST_LOG2, HASH_PORTABLE);
 	if ($hasher->CheckPassword($oldpassword, $rows['password'])) {
 		$valid_old_password = $oldpassword;
 	} else {
@@ -75,7 +54,7 @@ if($_POST)
 	if ((strlen($valid_old_password) > 0) &&
 	(strlen($valid_password) > 0)) {
 		
-		$hasher = new PasswordHash($hash_cost_log2, $hash_portable);
+		$hasher = new PasswordHash(HASH_COST_LOG2, HASH_PORTABLE);
 		$hash = $hasher->HashPassword($valid_password);
 		if (strlen($hash) < 20) {
 			unset($hasher);

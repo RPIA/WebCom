@@ -1,26 +1,5 @@
 <?php
 
-require 'PasswordHash.php';
-
-define("SQL_HOST", "localhost");
-define("SQL_USERNAME", "okeefm");
-define("SQL_PASSWORD", "lxj9zf3dse");
-define("SQL_DATABASE", "rpia");
-
-mysql_connect(SQL_HOST, SQL_USERNAME, SQL_PASSWORD)
-    or die("Unable to connect to MySQL.");
-mysql_select_db(SQL_DATABASE)
-    or die("Error while connecting to database.");
-
-// Base-2 logarithm of the iteration count used for password stretching
-$hash_cost_log2 = 8;
-// Do we require the hashes to be portable to older systems (less secure)?
-$hash_portable = FALSE;
-
-function quote_smart($value) {
-	return mysql_real_escape_string($value);
-}
-
 if ($newuser) {
 	$valid_firstname = '';
 	$valid_lastname = '';
@@ -43,8 +22,7 @@ if ($newuser) {
 	$error_password = '';
 	$error_password_confirmation = '';
 } else {
-	//$user_id = $_SESSION['userid'];
-	$user_id = 4;
+	$user_id = $_SESSION['userInfo']['id'];
 	
 	$query = "SELECT * FROM `users`, `states`, `majors` WHERE  users.addressState = states.id AND users.majorID = majors.id AND users.id = ".quote_smart($user_id);
 	$result = mysql_query($query);
@@ -286,7 +264,7 @@ if($_POST)
 				$id = $result[0];
 			}
 			
-			$hasher = new PasswordHash($hash_cost_log2, $hash_portable);
+			$hasher = new PasswordHash(HASH_COST_LOG2, HASH_PORTABLE);
 			$hash = $hasher->HashPassword($valid_password);
 			if (strlen($hash) < 20) {
 				unset($hasher);
